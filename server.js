@@ -4,6 +4,9 @@ const server = express();
 const moment = require("moment");
 
 const userRouter = require("./users/userRouter");
+const cors = require("cors");
+
+server.use(cors());
 
 server.use("/api/users", logger, userRouter);
 
